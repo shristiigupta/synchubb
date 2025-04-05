@@ -1,0 +1,279 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100%;
+  background: #0d0d0d;
+  overflow: hidden;
+}
+
+.hero-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+
+.grid-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+                    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: moveGrid 10s linear infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes moveGrid {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+.navbar {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 12px 32px;
+  border-radius: 999px;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.hero-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 80px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 15px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.badge-label {
+  background: #007aff;
+  color: white;
+  padding: 2px 8px;
+  font-size: 10px;
+  border-radius: 999px;
+}
+
+.main-text {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.highlight-text {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #3fa9f5;
+  margin: 0;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-content {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;         
+    max-width: 900px;    
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .hero {
+    position: relative;
+    width: 100vw; 
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-content {
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 20px;
+  }
+
+  .grid-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;   
+    height: 100vh;  
+    z-index: 0;
+    background-color: #000;
+  }
+  
+  .grid-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0d0d0d; 
+    background-image: 
+      linear-gradient(90deg, rgba(255,255,255,0.12) 1px, transparent 1px),
+      linear-gradient(rgba(255,255,255,0.12) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: moveGrid 10s linear infinite;
+    z-index: -1;
+    pointer-events: none;
+    filter: drop-shadow(0 0 1px rgba(255,255,255,0.2));
+  }
+  
+  .grid-bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      rgba(0, 140, 255, 0.4),
+      rgba(0, 140, 255, 0.4) 2px,
+      transparent 2px,
+      transparent 80px
+    );
+    background-size: 100px 100%;
+    animation: flicker 6s infinite ease-in-out;
+    pointer-events: none;
+  }
+
+  @keyframes flicker {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.4; }
+  }
+  
+  .blue-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .blue-lines .line {
+    position: absolute;
+    top: -100%;
+    width: 2px;
+    height: 200%;
+    background: linear-gradient(to bottom, rgba(0, 132, 255, 0) 0%, rgba(0, 132, 255, 0.5) 50%, rgba(0, 132, 255, 0) 100%);
+    animation: verticalMove 6s linear infinite;
+    opacity: 0.6;
+  }
+  
+  .blue-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .blue-lines .line {
+    position: absolute;
+    top: -100%;
+    width: 1px;
+    height: 300%;
+    background: linear-gradient(to bottom, rgba(0, 140, 255, 0) 0%, rgba(0, 140, 255, 0.8) 50%, rgba(0, 140, 255, 0) 100%);
+    animation: verticalMove 4s linear infinite;
+    opacity: 0.6;
+    filter: blur(1px);
+  }
+  
+  @keyframes verticalMove {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+
+  .grey-squares {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .grey-square {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(128, 128, 128, 0.2); /* light grey */
+    border-radius: 2px;
+  }
+  
+  
+  

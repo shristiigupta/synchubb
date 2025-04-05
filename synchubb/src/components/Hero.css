@@ -1,0 +1,35 @@
+.hero {
+    text-align: center;
+    z-index: 2;
+  }
+  
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    background: #111;
+    border-radius: 20px;
+    padding: 6px 14px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .new {
+    background: #00bfff;
+    color: white;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 12px;
+    margin-right: 8px;
+    font-size: 0.75rem;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #fff;
+  }
+  
+  .hero h1 span {
+    color: #2196f3;
+  }
+  

@@ -1,0 +1,37 @@
+.grid-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    z-index: 0;
+    animation: backgroundFade 10s infinite alternate;
+  }
+  
+  .square {
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    background-color: rgba(255, 255, 255, 0.03);
+    animation: pulse 8s infinite;
+  }
+  
+  @keyframes backgroundFade {
+    0% {
+      filter: brightness(1);
+    }
+    100% {
+      filter: brightness(1.2);
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 0.05;
+    }
+    50% {
+      opacity: 0.1;
+    }
+  }
+  
