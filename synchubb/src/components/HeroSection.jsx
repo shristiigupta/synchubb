@@ -1,22 +1,30 @@
 import React from 'react';
 import './HeroSection.css';
+import BackgroundGrid from './BackgroundGrid';
 
 const HeroSection = () => {
+  // Generate sparkle dots
+  const sparkles = Array.from({ length: 25 }).map((_, i) => (
+    <div
+      key={i}
+      className="sparkle"
+      style={{
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        animationDelay: `${Math.random() * 6}s`,
+      }}
+    />
+  ));
+
   return (
     <div className="hero">
+      <BackgroundGrid />
 
-      <div className="grid-bg"></div>
-
-      <div className="blue-lines">
-      <span className="line" style={{ left: '15%', animationDuration: '5s' }}></span>
-      <span className="line" style={{ left: '30%', animationDuration: '4s' }}></span>
-      <span className="line" style={{ left: '45%', animationDuration: '6s' }}></span>
-      <span className="line" style={{ left: '60%', animationDuration: '3.5s' }}></span>
-      <span className="line" style={{ left: '75%', animationDuration: '5.5s' }}></span>
-
+      {/* Add animated blue sparkles instead of lines */}
+      <div className="blue-sparkles">
+        {sparkles}
       </div>
 
-    
       <nav className="navbar">
         <ul>
           <li>Home</li>
@@ -25,7 +33,6 @@ const HeroSection = () => {
           <li>DEF</li>
         </ul>
       </nav>
-
 
       <div className="hero-content">
         <div className="badge">
@@ -36,8 +43,6 @@ const HeroSection = () => {
         <h1><span>SyncHubb</span></h1>
       </div>
     </div>
-
-    
   );
 };
 
